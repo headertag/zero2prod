@@ -128,3 +128,13 @@ From inside Vim:
 | `[d` / `]d` | Previous / next diagnostic |
 | `<leader>d` | Show current diagnostic |
 | `:LspDiagShow` | Open quickfix list with all diagnostics |
+
+## Hello, World! Why Rust?
+
+| Language | Executable Size (M1) | What is actually inside the file? | The "Why Rust?" Perspective |
+| :--- | :--- | :--- | :--- |
+| **Assembly** (ARM64) | 16 K | Raw CPU instructions wrapped in an empty 16KB Mach-O envelope. | **Ultimate Control:** Absolute bare metal. Zero abstractions, zero safety nets. You are manually pushing bits. |
+| **C** | 33 K | CPU instructions + a tiny dynamic link to the OS's `libc`. | **Fast but Unsafe:** Tiny and lightning-fast, but relies on the OS. You are entirely responsible for manual memory management (which often leads to security vulnerabilities and crashes). |
+| **Rust** | **435 K** | **CPU instructions + Rust's statically linked standard library.** | **The Sweet Spot:** It statically links its own standard lib (hence 435K instead of 33K) so it can run independently anywhere. It gives you the memory safety of Python/Go, but with *zero* garbage collector and *zero* heavy runtime. |
+| **Go** | 1.9 M | CPU instructions + standard lib + the Go Runtime (Garbage Collector). | **Safe but Heavy:** Great developer experience and built-in concurrency, but you pay a mandatory ~1.5MB "tax" for the garbage collector and runtime scheduler. |
+| **Python** (PyInstaller)| 6.5 M | The Python C-interpreter + standard lib + your script. | **Ultimate Convenience:** Extremely easy to write, but massive overhead. You are shipping an entire software engine just to execute a text file. |
