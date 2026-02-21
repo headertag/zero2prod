@@ -1,17 +1,16 @@
 fn main() {
     println!("Hello, world!");
     println!("-3 to the power of 2 is:");
-    println!("{}", power( -3, 2 ) );
+    println!("{}", power( -3, 2));
 }
 
-fn power( base: i64, n:i64 ) -> i64
-{
-    assert!( base != 0 && n != 0 );
+fn power( base: i64, n:i64 ) -> i64 {
+    assert!(base != 0 && n != 0);
     let mut i = 1;
     let mut calc = base;
     while i < n {
-        calc = calc * base;
-        i = i + 1;
+        calc *= base;
+        i += 1;
     }
     calc
 }
