@@ -1,5 +1,10 @@
 # zero2prod
 
+I'm currently studying rust-lang following the direction of:
+
+* **O'Reilly Programming Rust** - Jim Blandy, Jason Orendorff & Leonara F. S. Tindall
+* **Zero to Production in Rust** - Luca Palmieri
+
 ## Development Environment: Vim + rust-analyzer
 
 ### Prerequisites
