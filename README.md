@@ -104,7 +104,7 @@ cargo clippy
 cargo fmt --check
 
 # rust-analyzer can analyze the project
-rust-analyzer analysis-stats /path/to/zero2prod
+rust-analyzer analysis-stats .
 ```
 
 From inside Vim:
@@ -128,6 +128,7 @@ From inside Vim:
 | `[d` / `]d` | Previous / next diagnostic |
 | `<leader>d` | Show current diagnostic |
 | `:LspDiagShow` | Open quickfix list with all diagnostics |
+| `:LspDiagCurrent` | Get info on the highlighted error |
 
 ## Hello, World! Why Rust?
 

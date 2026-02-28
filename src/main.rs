@@ -1,7 +1,25 @@
+use std::env;
+use std::str::FromStr;
+
 fn main() {
-    println!("Hello, world!");
-    println!("-3 to the power of 2 is:");
-    println!("{}", power(-3, 2));
+    println!("Hello, maths powers!");
+
+    let mut numbers = Vec::new();
+    for arg in env::args().skip(1) {
+        numbers.push(i64::from_str(&arg).expect("error parsing arg"));
+    }
+
+    if numbers.is_empty() {
+        eprintln!("Usage: powers NUMBER EXP");
+        std::process::exit(1);
+    }
+    if numbers.len() > 2 {
+        eprintln!("Usage: powers NUMBER EXP");
+        eprintln!("Error: only two values expected saw {}", numbers.len());
+        std::process::exit(1);
+    }
+
+    println!("{}", power(numbers[0], numbers[1]));
 }
 
 fn power(base: i64, n: i64) -> i64 {
