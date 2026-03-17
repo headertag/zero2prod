@@ -3,7 +3,7 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'app-crimson-frog-8696'
+app = 'zero2prod-53ezmw'
 primary_region = 'iad'
 
 [build]
@@ -20,7 +20,6 @@ primary_region = 'iad'
   processes = ['app']
 
 [[vm]]
-  memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
   memory_mb = 256
